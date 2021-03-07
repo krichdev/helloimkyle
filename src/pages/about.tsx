@@ -1,7 +1,6 @@
 // Gatsby supports TypeScript natively!
 import React from "react"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from 'gatsby-plugin-image'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -24,8 +23,8 @@ const About = ({data}) => (
             Learn More
           </a>
         </div>
-        <div className="w-full bg-gray-300">
-          <Img fluid={data?.file?.childImageSharp.fluid} />
+        <div className="w-full">
+          <StaticImage src="../images/main-about.jpg" alt="Picture of my family" placeholder="blurred" />
         </div>
       </div>
     </section>
@@ -33,15 +32,3 @@ const About = ({data}) => (
 )
 
 export default About
-
-export const query = graphql`
-  query AboutPageQuery {
-    file(id: { eq: "80b266f2-61ac-58f7-979c-a3e6cee1fde5" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
