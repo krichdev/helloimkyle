@@ -24,8 +24,8 @@ const About = ({data}) => (
             Learn More
           </a>
         </div>
-        <div className="w-full">
-          <Img fluid={data.file.childImageSharp.fluid} />
+        <div className="w-full bg-gray-300">
+          <Img fluid={data?.file.childImageSharp.fluid} />
         </div>
       </div>
     </section>
