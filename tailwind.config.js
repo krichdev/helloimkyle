@@ -1,7 +1,7 @@
 // tailwind.config.js
 module.exports = {
   future: {},
-  purge: [false],
+  purge: ["./src/**/*.jsx", "./src/**/*.js", "./src/**/*.tsx"],
   theme: {
     extend: {},
   },

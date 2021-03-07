@@ -1,7 +1,7 @@
 import React from "react"
 
 import Header from "./header"
-import "../styles.css"
+import "../styles/style.css"
 
 const Layout = ({children}) => {
   return (
