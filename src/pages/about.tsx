@@ -25,7 +25,7 @@ const About = ({data}) => (
           </a>
         </div>
         <div className="w-full bg-gray-300">
-          <Img fluid={data?.file.childImageSharp.fluid} />
+          <Img fluid={data?.file?.childImageSharp.fluid} />
         </div>
       </div>
     </section>
