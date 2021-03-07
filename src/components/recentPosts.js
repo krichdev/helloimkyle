@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const RecentPosts = () => (
   <section class="container px-4 pb-24 mx-auto">
@@ -64,6 +65,12 @@ const RecentPosts = () => (
           Keep Reading
         </a>
       </div>
+      <Link
+        to="/blog"
+        className="text-white w-full md:w-1/4 text-center mx-auto font-semibold px-6 py-3 text-base border rounded border-transparent leading-snug bg-indigo-500"
+      >
+        All Posts
+      </Link>
     </div>
   </section>
 )

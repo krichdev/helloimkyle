@@ -6,7 +6,7 @@ const Intro = () => (
     <div className="w-full md:w-8/12">
       <h1 className="mb-8 text-5xl font-bold text-gray-900 md:text-6xl">
         Hello, I'm Kyle. <br />
-        I'm a <span className="text-indigo-500">front end engineer</span>.
+        I'm a <span className="text-indigo-500">front end developer</span>.
       </h1>
       <p className="mb-3 text-base text-gray-500 md:text-2xl">
         Utilizing modern JavaScript to build responsive web apps and features to
@@ -20,7 +20,7 @@ const Intro = () => (
         <a href="https://www.linkedin.com/in/kyle-richardson" target="__blank">
           <SiLinkedin size="2rem" />
         </a>
-        <a href="https://www.linkedin.com/in/kyle-richardson" target="__blank" className="mx-4">
+        <a href="https://www.github.com/krichdev" target="__blank" className="mx-4">
           <SiGithub size="2rem" />
         </a>
       </div>

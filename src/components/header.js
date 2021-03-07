@@ -43,7 +43,7 @@ const Header = () => {
             <div
               className={`${
                 !isOpen && "hidden"
-              } absolute top-0 left-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-white rounded shadow`}
+              } absolute top-0 left-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-white rounded shadow-lg border border-gray-200`}
             >
               <button
                 className="self-end flex-none px-2 ml-2 btn btn-link btn-icon"
