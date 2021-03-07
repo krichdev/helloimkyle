@@ -4,6 +4,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import resume from "../content/Kyle-Richardson-Resume.pdf"
 
 const Resume = () => (
   <Layout>
@@ -16,7 +17,7 @@ const Resume = () => (
             My Working Timeline
           </h2>
           <div className="mb-0 space-x-0 md:space-x-2">
-          <button className="text-white font-semibold px-6 py-3 text-base boorder rounded border-transparent leading-snug bg-indigo-900">Download Resume</button>
+          <a href={resume} className="text-white font-semibold px-6 py-3 text-base boorder rounded border-transparent leading-snug bg-indigo-900">Download Resume</a>
           </div>
         </div>
       </section>
