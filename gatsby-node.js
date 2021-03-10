@@ -17,8 +17,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `)
 
+  const projectResult = await graphql(`
+    query {
+      allMdx(filter: { fileAbsolutePath: { regex: "/projects/"} }) {
+        nodes {
+          frontmatter {
+            slug
+          }
+          id
+        }
+      }
+    }
+  `)
+
   if (blogResult.errors) {
-    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+    reporter.panicOnBuild(`🚨  ERROR: ${blogResult} query => ${blogResult.errors}`)
+  }
+
+  if (projectResult.errors) {
+    reporter.panicOnBuild(`🚨  ERROR: ${projectResult} query => ${projectResult.errors}`)
   }
 
   // Create blog pages.
@@ -31,5 +48,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: path.resolve(`./src/templates/blog-layout.js`),
       context: { id },
     })
-  })
+  });
+
+  // Create project pages.
+  const projects = projectResult.data.allMdx.nodes
+
+  projects.map(({ frontmatter, id }) => {
+    createPage({
+      path: `/projects/${frontmatter.slug}`,
+      component: path.resolve(`./src/templates/project-layout.js`),
+      context: { id },
+    })
+  });
 }

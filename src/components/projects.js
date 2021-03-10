@@ -1,103 +1,71 @@
 import React from "react"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const Projects = () => (
-  <section className="container px-4 pb-16 mx-auto">
-    <h2 className="mb-16 text-4xl font-extrabold leading-tight text-indigo-500">
-      Stuff I've Worked On
-    </h2>
-    <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
-      <div>
-        <a href="/">
-          <img
-            src="https://kutty.netlify.app/brand/og.png"
-            className="object-cover w-full h-56 mb-5 bg-center rounded"
-            alt="Kutty"
-            loading="lazy"
-          />
-        </a>
-        <h2 className="mb-2 text-lg font-semibold text-gray-900">
-          <a href="/" className="text-gray-900 hover:text-purple-700">
-            Process Documents Using Artificial Intelligence For RPA Bots
-          </a>
-        </h2>
+const Projects = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      projects: allMdx(
+        limit: 6
+        filter: { fileAbsolutePath: { regex: "/projects/" } }
+      ) {
+        nodes {
+          frontmatter {
+            place
+            slug
+            role
+            project
+            tech
+            img {
+              childImageSharp {
+                gatsbyImageData(
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP, AVIF]
+                )
+              }
+            }
+          }
+          id
+        }
+      }
+    }
+  `)
+  return (
+    <section className="container px-4 pb-16 mx-auto">
+      <h2 className="mb-16 text-4xl font-extrabold leading-tight text-indigo-500">
+        Stuff I've Worked On
+      </h2>
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+        {data.projects.nodes.map(project => {
+          const image = getImage(project.frontmatter.img)
+          return (
+            <div>
+              <GatsbyImage
+                image={image}
+                loading="eager"
+                objectFit="contain"
+                alt={`${project.frontmatter.role} at ${project.frontmatter.place}`}
+                className="object-cover w-full h-56 mb-5 bg-center rounded"
+              />
+              <h2 className="mb-2 text-lg font-semibold text-gray-900">
+                <Link
+                  to={`/projects/${project.frontmatter.slug}`}
+                  className="text-gray-900 hover:text-purple-700"
+                >
+                  {project.frontmatter.project} at {project.frontmatter.place}
+                </Link>
+              </h2>
+              <div className="flex mb-6 space-x-2">
+                {project.frontmatter.tech.map(val => (
+                  <span className="text-white bg-gray-900 rounded-md px-4">{val}</span>
+                ))}
+              </div>
+            </div>
+          )
+        })}
       </div>
-      <div>
-        <a href="/">
-          <img
-            src="https://kutty.netlify.app/brand/og.png"
-            className="object-cover w-full h-56 mb-5 bg-center rounded"
-            alt="Kutty"
-            loading="lazy"
-          />
-        </a>
-        <h2 className="mb-2 text-lg font-semibold text-gray-900">
-          <a href="/" className="text-gray-900 hover:text-purple-700">
-            Implement Dark Mode in Your Android App
-          </a>
-        </h2>
-      </div>
-      <div>
-        <a href="/">
-          <img
-            src="https://kutty.netlify.app/brand/og.png"
-            className="object-cover w-full h-56 mb-5 bg-center rounded"
-            alt="Kutty"
-            loading="lazy"
-          />
-        </a>
-        <h2 className="mb-2 text-lg font-semibold text-gray-900">
-          <a href="/" className="text-gray-900 hover:text-purple-700">
-            Why is Mental Health one of the Important Issues to Address?
-          </a>
-        </h2>
-      </div>
-      <div>
-        <a href="/">
-          <img
-            src="https://kutty.netlify.app/brand/og.png"
-            className="object-cover w-full h-56 mb-5 bg-center rounded"
-            alt="Kutty"
-            loading="lazy"
-          />
-        </a>
-        <h2 className="mb-2 text-lg font-semibold text-gray-900">
-          <a href="/" className="text-gray-900 hover:text-purple-700">
-            Pattern Matching In Elixir
-          </a>
-        </h2>
-      </div>
-      <div>
-        <a href="/">
-          <img
-            src="https://kutty.netlify.app/brand/og.png"
-            className="object-cover w-full h-56 mb-5 bg-center rounded"
-            alt="Kutty"
-            loading="lazy"
-          />
-        </a>
-        <h2 className="mb-2 text-lg font-semibold text-gray-900">
-          <a href="/" className="text-gray-900 hover:text-purple-700">
-            3 things you should change during your focus group interview
-          </a>
-        </h2>
-      </div>
-      <div>
-        <a href="/">
-          <img
-            src="https://kutty.netlify.app/brand/og.png"
-            className="object-cover w-full h-56 mb-5 bg-center rounded"
-            alt="Kutty"
-            loading="lazy"
-          />
-        </a>
-        <h2 className="mb-2 text-lg font-semibold text-gray-900">
-          <a href="/" className="text-gray-900 hover:text-purple-700">
-            Using Webpack with React Typescript
-          </a>
-        </h2>
-      </div>
-    </div>
-  </section>
-)
+    </section>
+  )
+}
 
 export default Projects
