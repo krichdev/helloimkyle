@@ -48,16 +48,13 @@ const Projects = () => {
                 className="object-cover w-full h-56 mb-5 bg-center rounded"
               />
               <h2 className="mb-2 text-lg font-semibold text-gray-900">
-                <Link
-                  to={`/projects/${project.frontmatter.slug}`}
-                  className="text-gray-900 hover:text-purple-700"
-                >
-                  {project.frontmatter.project} at {project.frontmatter.place}
-                </Link>
+                {project.frontmatter.project} at {project.frontmatter.place}
               </h2>
               <div className="flex mb-6 space-x-2">
                 {project.frontmatter.tech.map(val => (
-                  <span className="text-white bg-gray-900 rounded-md px-1 lg:px-4">{val}</span>
+                  <span className="text-white bg-gray-900 rounded-md px-1 lg:px-4">
+                    {val}
+                  </span>
                 ))}
               </div>
             </div>
