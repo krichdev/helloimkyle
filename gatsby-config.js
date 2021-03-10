@@ -13,9 +13,34 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/blog`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [".mdx", ".md"],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-vscode`,
+          },
+        ],
+        plugins: [`gatsby-remark-images`],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

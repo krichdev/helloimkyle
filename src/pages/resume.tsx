@@ -9,7 +9,6 @@ import resume from "../content/Kyle-Richardson-Resume.pdf"
 const Resume = () => (
   <Layout>
     <SEO title="Kyle Richardson Resume" />
-    {/* <!-- component --> */}
     <div className="container mx-auto">
       <section className="w-full mb-6">
         <div className="w-full px-4 py-20 mx-auto text-center md:w-3/4 lg:w-2/4">
