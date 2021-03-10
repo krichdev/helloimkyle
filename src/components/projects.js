@@ -57,7 +57,7 @@ const Projects = () => {
               </h2>
               <div className="flex mb-6 space-x-2">
                 {project.frontmatter.tech.map(val => (
-                  <span className="text-white bg-gray-900 rounded-md px-4">{val}</span>
+                  <span className="text-white bg-gray-900 rounded-md px-1 lg:px-4">{val}</span>
                 ))}
               </div>
             </div>
