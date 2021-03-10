@@ -42,7 +42,7 @@ const RecentPosts = () => {
             <p class="mb-4 text-base font-normal text-gray-600">
               {post.excerpt}
             </p>
-            <Link to={`/blog/${post.frontmatter.slug}`} className="text-indigo-500">
+            <Link to={`/blog/${post.frontmatter.slug}`} className="text-indigo-500 underline">
               Keep Reading
             </Link>
           </div>

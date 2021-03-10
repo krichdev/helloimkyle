@@ -4,7 +4,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import resume from "../content/Kyle-Richardson-Resume.pdf"
+import resume from "../files/Kyle-Richardson-Resume.pdf"
 
 const Resume = () => (
   <Layout>
