@@ -13,9 +13,9 @@ export default function Post({ data: { mdx } }) {
       <SEO title={mdx.frontmatter.title} />
       <article
         class="container px-4 py-24 mx-auto"
-        itemid="#"
-        itemscope
-        itemtype="http://schema.org/BlogPosting"
+        itemID="#"
+        itemScope
+        itemType="http://schema.org/BlogPosting"
       >
         <div className="w-full mx-auto mb-12 text-left md:w-3/4 lg:w-1/2">
         <h1

@@ -26,6 +26,7 @@ const Resume = () => (
         <div className="flex flex-row-reverse md:contents">
           <div className="bg-indigo-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
             <h3 className="font-semibold text-lg mb-1">Botany.io</h3>
+            <p className="mb-4 text-xs font-semibold tracking-wider text-white uppercase">July 2019 - March 2021</p>
             <p className="leading-tight text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
               quaerat?
@@ -48,6 +49,7 @@ const Resume = () => (
           </div>
           <div className="bg-indigo-500 col-start-6 col-end-10 p-4 rounded-xl my-4 mr-auto shadow-md">
             <h3 className="font-semibold text-lg mb-1">Howard Schultz</h3>
+            <p className="mb-4 text-xs font-semibold tracking-wider text-white uppercase">May 2019 - July 2019</p>
             <p className="leading-tight text-justify">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae,
               facilis.
@@ -58,6 +60,7 @@ const Resume = () => (
         <div className="flex flex-row-reverse md:contents">
           <div className="bg-indigo-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
             <h3 className="font-semibold text-lg mb-1">TireBuyer</h3>
+            <p className="mb-4 text-xs font-semibold tracking-wider text-white uppercase">May 2017 - May 2019</p>
             <p className="leading-tight text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
               quaerat?
@@ -74,6 +77,7 @@ const Resume = () => (
         <div className="flex flex-row-reverse md:contents">
           <div className="bg-indigo-500 col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
             <h3 className="font-semibold text-lg mb-1">General Assembly</h3>
+            <p className="mb-4 text-xs font-semibold tracking-wider text-white uppercase">January 2017 - April 2017</p>
             <p className="leading-tight text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
               quaerat?
@@ -98,6 +102,7 @@ const Resume = () => (
             <h3 className="font-semibold text-lg mb-1">
               Seattle Mailing Bureau
             </h3>
+            <p className="mb-4 text-xs font-semibold tracking-wider text-white uppercase">June 2009 - January 2017</p>
             <p className="leading-tight text-justify">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae,
               facilis.
