@@ -91,7 +91,7 @@ const Contact = () => {
                   </button>
                 </>
               ) : (
-                <p className="text-white text-2xl text-center h-full flex justify-items-center items-center">{formData.submittedMsg}</p>
+                <p className="text-white text-2xl h-full flex justify-center items-center">{formData.submittedMsg}</p>
               )}
             </div>
           </form>
