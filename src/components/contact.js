@@ -46,7 +46,7 @@ const Contact = () => {
           Get In Touch
         </h2>
         <div className="mt-8 px-4">
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} data-netlify-honeypot="bot-field">
             <div className="grid grid-cols-1 gap-6 h-96">
               {!formData.submittedMsg ? (
                 <>
@@ -56,6 +56,7 @@ const Contact = () => {
                       type="text"
                       className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                       placeholder="Your Name"
+                      onChange={handleChange}
                     />
                   </label>
                   <label className="block">
@@ -64,6 +65,7 @@ const Contact = () => {
                       type="email"
                       className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                       placeholder="name@example.com"
+                      onChange={handleChange}
                     />
                   </label>
                   <label className="block">
@@ -72,6 +74,7 @@ const Contact = () => {
                       className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                       rows="3"
                       placeholder="Write me a message"
+                      onChange={handleChange}
                     />
                   </label>
                   <button
