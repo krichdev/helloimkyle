@@ -11,7 +11,7 @@ const Contact = () => {
     name: "",
     email: "",
     message: "",
-    submittedMsg: "Thank you for contacting me, I will be in touch soon!",
+    submittedMsg: "",
   })
 
   const handleChange = e => {
@@ -82,7 +82,7 @@ const Contact = () => {
                   </button>
                 </>
               ) : (
-                <p className="text-white text-2xl text-center h-full flex items-center">{formData.submittedMsg}</p>
+                <p className="text-white text-2xl text-center h-full flex justify-items-center items-center">{formData.submittedMsg}</p>
               )}
             </div>
           </form>
