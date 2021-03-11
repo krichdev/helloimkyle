@@ -18,6 +18,8 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
+  const disabledForm = !formData.name || !formData.email || !formData.message;
+
   const handleSubmit = e => {
     e.preventDefault()
     const form = e.target
@@ -54,6 +56,7 @@ const Contact = () => {
                     <span className="text-white">Name</span>
                     <input
                       type="text"
+                      name="name"
                       className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                       placeholder="Your Name"
                       onChange={handleChange}
@@ -62,6 +65,7 @@ const Contact = () => {
                   <label className="block">
                     <span className="text-white">Email</span>
                     <input
+                      name="email"
                       type="email"
                       className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                       placeholder="name@example.com"
@@ -73,13 +77,15 @@ const Contact = () => {
                     <textarea
                       className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                       rows="3"
+                      name="message"
                       placeholder="Write me a message"
                       onChange={handleChange}
                     />
                   </label>
                   <button
                     type="submit"
-                    className="text-white font-semibold px-6 py-3 text-base boorder rounded border-transparent leading-snug bg-indigo-900"
+                    disabled={disabledForm}
+                    className={`text-white font-semibold px-6 py-3 text-base border rounded border-transparent leading-snug bg-indigo-900 ${disabledForm ? 'cursor-not-allowed' : 'cursor-pointer'}`}
                   >
                     Submit
                   </button>

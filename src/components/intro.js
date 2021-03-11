@@ -4,7 +4,7 @@ import { SiLinkedin, SiGithub } from "react-icons/si"
 const Intro = () => (
   <section className="container px-4 py-16 mx-auto">
     <div className="w-full md:w-8/12">
-      <h1 className="mb-8 text-5xl font-bold text-gray-900 md:text-6xl">
+      <h1 className="mb-8 text-4xl font-bold text-gray-900 md:text-6xl">
         Hello, I'm Kyle. <br />
         I'm a <span className="text-gradient bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500">front end developer</span>.
       </h1>
