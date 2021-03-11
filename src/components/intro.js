@@ -6,7 +6,7 @@ const Intro = () => (
     <div className="w-full md:w-8/12">
       <h1 className="mb-8 text-4xl font-bold text-gray-900 md:text-6xl">
         Hello, I'm Kyle. <br />
-        I'm a <span className="text-gradient bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500">front end developer</span>.
+        I'm a <span className="text-indigo-500">front end developer</span>.
       </h1>
       <p className="mb-3 text-base text-gray-500 md:text-2xl">
         Utilizing modern JavaScript to build responsive web apps and features to
