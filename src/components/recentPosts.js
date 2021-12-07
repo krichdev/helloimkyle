@@ -7,6 +7,7 @@ const RecentPosts = () => {
       recentPostsData: allMdx(
         limit: 3
         filter: { fileAbsolutePath: { regex: "/blog/" } }
+        sort: {fields: frontmatter___date, order: DESC}
       ) {
         nodes {
           frontmatter {

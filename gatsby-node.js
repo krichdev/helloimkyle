@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const blogResult = await graphql(`
     query {
-      allMdx(filter: { fileAbsolutePath: { regex: "/blog/" } }) {
+      allMdx(filter: {fileAbsolutePath: {regex: "/blog/"}}) {
         nodes {
           frontmatter {
             slug
@@ -41,7 +41,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Create blog pages.
   const posts = blogResult.data.allMdx.nodes
   // call `createPage` for each result
-
   posts.map(({ frontmatter, id }) => {
     createPage({
       path: `/blog/${frontmatter.slug}`,

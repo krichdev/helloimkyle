@@ -6,15 +6,15 @@ const Intro = () => (
     <div className="w-full md:w-8/12">
       <h1 className="mb-8 text-4xl font-bold text-gray-900 md:text-6xl">
         Hello, I'm Kyle. <br />
-        I'm a <span className="text-indigo-500">front end developer</span>.
+        I'm a <span className="text-indigo-500">front end engineer</span>.
       </h1>
       <p className="mb-3 text-base text-gray-500 md:text-2xl">
         Utilizing modern JavaScript to build responsive web apps and features to
         boost business growth and improve UX.
       </p>
       <p className="mb-5 text-base text-gray-500 md:text-2xl">
-        Most recently I was a founding member of a SaaS app to help developers
-        grow in their career.
+        Currently working with React at Alkymi helping develop the first Data Inbox
+        for the enterprise.
       </p>
       <div className="flex flex-row justify-start">
         <a href="https://www.linkedin.com/in/kyle-richardson" target="__blank">
