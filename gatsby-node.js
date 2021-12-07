@@ -48,15 +48,4 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: { id },
     })
   });
-
-  // Create project pages.
-  const projects = projectResult.data.allMdx.nodes
-
-  projects.map(({ frontmatter, id }) => {
-    createPage({
-      path: `/projects/${frontmatter.slug}`,
-      component: path.resolve(`./src/templates/project-layout.js`),
-      context: { id },
-    })
-  });
 }
