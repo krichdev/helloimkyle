@@ -1,16 +1,16 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SeoWrap from "../components/seo"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function Post({ data: { mdx } }) {
   const image = getImage(mdx.frontmatter.img)
   return (
     <Layout>
-      <SEO title={mdx.frontmatter.title} />
+      <SeoWrap title={mdx.frontmatter.title} />
       <article
         class="container px-4 py-24 mx-auto"
         itemID="#"

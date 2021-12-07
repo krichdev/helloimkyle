@@ -3,11 +3,11 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SeoWrap from "../components/seo"
 
 const About = ({ data }) => (
   <Layout>
-    <SEO title="About Me" />
+    <SeoWrap title="About Me" />
     <section className="container px-4 py-12 mx-auto">
       <p className="mb-4 text-xs font-semibold tracking-wider text-gray-400 uppercase">
         About Kyle Richardson

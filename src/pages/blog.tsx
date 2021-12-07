@@ -4,11 +4,11 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { AiOutlineRight } from "react-icons/ai"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SeoWrap from "../components/seo"
 
 const Blog = ({ data: { allMdx } }) => (
   <Layout>
-    <SEO title="Blog" />
+    <SeoWrap title="Blog" />
     <section className="container px-4 py-24 mx-auto">
       <h2 className="pb-8 mb-12 text-2xl font-extrabold leading-tight text-gray-900 border-b border-gray-200 md:text-4xl">
         All Posts

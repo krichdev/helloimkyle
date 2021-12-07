@@ -15,7 +15,6 @@ const Header = () => {
         <div className="flex items-center space-x-1">
           <div className="hidden space-x-12 md:inline-flex">
             <Link to="/about" className="py-3">About Me</Link>
-            <Link to="/blog" className="py-3">Blog</Link>
             <Link to="/resume" className="text-white font-semibold px-6 py-3 text-base border rounded border-transparent leading-snug bg-indigo-500">Resume</Link>
           </div>
           <div className="inline-flex md:hidden">
@@ -67,7 +66,6 @@ const Header = () => {
                 <span className="sr-only">Close Menu</span>
               </button>
               <Link to="/about">About Me</Link>
-              <Link to="/blog">Blog</Link>
               <Link to="/resume" className="text-white font-semibold px-6 py-3 text-base border rounded border-transparent leading-snug bg-indigo-500">Resume</Link>
             </div>
           </div>

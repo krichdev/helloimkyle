@@ -59,9 +59,6 @@ module.exports = {
               maxWidth: 590,
             },
           },
-          {
-            resolve: `gatsby-remark-vscode`,
-          },
         ],
         plugins: [`gatsby-remark-images`],
       },
