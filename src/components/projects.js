@@ -44,11 +44,11 @@ const Projects = () => {
                 image={image}
                 loading="eager"
                 objectFit="contain"
-                alt={`${project.frontmatter.role} at ${project.frontmatter.place}`}
+                alt={`${project.frontmatter.role} - ${project.frontmatter.place}`}
                 className="object-cover w-full h-56 mb-5 bg-center rounded"
               />
               <h2 className="mb-2 text-lg font-semibold text-gray-900">
-                {project.frontmatter.project} at {project.frontmatter.place}
+                {project.frontmatter.project} - {project.frontmatter.place}
               </h2>
               <div className="flex mb-6 space-x-2">
                 {project.frontmatter.tech.map(val => (
